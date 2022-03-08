@@ -1,0 +1,15 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    {% if entry %}
+        {{ entry }}
+        <br><a href="{% url 'edit' title=title %}">Edit</a>
+    {% endif %}
+    {% if message %}
+        {{ message }}
+    {% endif %}
+{% endblock %}
